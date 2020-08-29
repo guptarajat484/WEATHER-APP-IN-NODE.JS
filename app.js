@@ -7,7 +7,7 @@ const weather = require('./weather')
 const app = express()
 
 
-
+port=process.env.PORT || 8000
 
 app.get("/", (req, res) => {
 
@@ -45,7 +45,7 @@ app.get('/weather', (req, res) => {
 })
 
 
-app.listen(8000, () => {
-    console.log("Server Is Runing On 8000 Port")
+app.listen(port, () => {
+    console.log("Server Is Runing On 8000"+port)
 })
 
